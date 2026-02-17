@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 1952671482}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerMovement
   moveSpeed: 4
-  jumpHeight: 400
+  jumpHeight: 7
 --- !u!54 &2058058158
 Rigidbody:
   m_ObjectHideFlags: 0
