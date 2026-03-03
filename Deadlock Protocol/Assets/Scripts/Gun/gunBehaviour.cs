@@ -4,7 +4,7 @@ public class gunBehaviour : MonoBehaviour
 {
     [Header("Kind of Gun")]
     public bool pistol;
-    public GameObject pistolShot;
+    public AudioSource pistolShot;
     public bool shotgun;
     private int shotgunBullets = 8;
     public bool machineGun;
@@ -19,7 +19,7 @@ public class gunBehaviour : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -62,6 +62,6 @@ public class gunBehaviour : MonoBehaviour
     }
     private void UsePistol()
     {
-        
+        pistolShot.Play();
     }
 }
