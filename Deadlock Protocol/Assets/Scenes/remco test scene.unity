@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd149ca3bcd40e84ea6eb17c68f7779f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::jumpPad
+  playerMovement: {fileID: 868360162}
 --- !u!65 &374437327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -365,12 +366,23 @@ Transform:
   m_GameObject: {fileID: 374437325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.59, y: -0.21, z: -1.59536}
+  m_LocalPosition: {x: 0.41, y: -0.21, z: 7.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &868360162 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5225703262251153663, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
+  m_PrefabInstance: {fileID: 717911301473183847}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7825d67555c7442a7527f2bc829958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::playerMovement
 --- !u!1 &1528357122 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 648340027228284081, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
