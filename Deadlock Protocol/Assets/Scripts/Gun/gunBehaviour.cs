@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class gunBehaviour : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class gunBehaviour : MonoBehaviour
     private int curMaxAmmo;
 
     private float laserRange;
+    private Vector3 localGameObjectLocation;
+    private RaycastHit hit;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        localGameObjectLocation = transform.position;
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class gunBehaviour : MonoBehaviour
         {
             if (pistol)
             {
+                laserRange = 100;
                 UsePistol();
             }
             if (shotgun) 
@@ -62,6 +66,8 @@ public class gunBehaviour : MonoBehaviour
     }
     private void UsePistol()
     {
+        Physics.Raycast(localGameObjectLocation, Vector3.forward, out RaycastHit hit, laserRange);
+        Debug.Log(hit);
         pistolShot.Play();
     }
 }
