@@ -9,14 +9,14 @@ public class playerMovement : MonoBehaviour
     public float moveSpeed = 4f;
     private Rigidbody rb;
     public float jumpHeight = 7f;
-    private bool isGrounded = false;
+    public bool isGrounded = false;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
-        if (isGrounded = true && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
@@ -34,6 +34,7 @@ public class playerMovement : MonoBehaviour
     void Jump()
     {
         rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+        isGrounded = false;
     }
     private void OnCollisionEnter(Collision collision)
     {
