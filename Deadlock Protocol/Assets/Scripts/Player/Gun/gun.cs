@@ -8,12 +8,24 @@ public class gun : MonoBehaviour
     public float reloadSpeed;
     public int ammo;
     public int maxAmmo;
-    public void Fire()
+    public virtual void Fire()
     {
         Debug.Log("BOOM");
     }
-    public void Reload()
+    public virtual void Reload()
     {
         Debug.Log("Realoading...");
+    }
+
+    public void Update()
+    {
+        if(ammo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Fire();
+        }
+        if(ammo == 0 && Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
+        }
     }
 }
