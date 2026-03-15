@@ -7,22 +7,32 @@ public class gun : MonoBehaviour
     public float damage;
     public float firerate;
     public float reloadSpeed;
-    public bool isReloading;
-    public bool pew;
+    private bool isReloading;
+    private bool pew;
     public int ammo;
     public int maxAmmo;
     public string bug;
+    public AudioSource gunSound;
+    public AudioClip gunShotSound;
+    public AudioClip gunReloadSound;
+
+    private void Start()
+    {
+        gunSound = GetComponent<AudioSource>();
+    }
     public virtual void Fire()
     {
-        if(pew == false)
+        if(!pew)
         {
+            gunSound.PlayOneShot(gunShotSound);
             StartCoroutine(FireRoutine());
         }
     }
     public virtual void Reload()
     {
-        if(isReloading == false)
+        if(!isReloading)
         {
+            gunSound.PlayOneShot(gunReloadSound);
             StartCoroutine(ReloadRoutine());
         }
     }
@@ -45,5 +55,15 @@ public class gun : MonoBehaviour
         pew = false;
     }
 
-    
+        public void Update()
+    {
+        if (!pew && !isReloading && ammo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Fire();
+        }
+        if (!isReloading && ammo < maxAmmo && Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
+        }
+    }
 }
