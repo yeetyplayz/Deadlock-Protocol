@@ -10,6 +10,7 @@ public class playerMovement : MonoBehaviour
     private Rigidbody rb;
     public float jumpHeight = 7f;
     public bool isGrounded = false;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
