@@ -647,8 +647,8 @@ MonoBehaviour:
   maxAmmo: 0
   bug: 
   gunSound: {fileID: 0}
-  gunShotSound: {fileID: 0}
-  gunReloadSound: {fileID: 0}
+  gunShotSound: {fileID: 8300000, guid: d1927acede19bda42b1f2f768838047d, type: 3}
+  gunReloadSound: {fileID: 8300000, guid: 791c2c2b1b0091a40898677eb241d60f, type: 3}
 --- !u!114 &1712349217
 MonoBehaviour:
   m_ObjectHideFlags: 0
