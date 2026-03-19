@@ -1,7 +1,12 @@
 using UnityEngine;
 
-public class playerMovement : MonoBehaviour
+public class player : MonoBehaviour
 {
+    [Header("Player Settings")]
+    public float health;
+    private float maxHealth;
+    public bool isDead;
+
     [Header("Movement Settings")]
     private Vector3 moveDir;
     private float hor;
@@ -13,8 +18,11 @@ public class playerMovement : MonoBehaviour
     
     void Start()
     {
+        maxHealth = 200;
+        health = maxHealth;
         rb = GetComponent<Rigidbody>();
     }
+
     void Update()
     {
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
@@ -47,5 +55,22 @@ public class playerMovement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health < 0)
+        {
+            Die();
+        }
+    }
+    public void HealHealth(float Heal)
+    {
+        health += Heal;
+    }
+    public void Die()
+    {
+        gameObject.SetActive(false);
+        isDead = true;
     }
 }
