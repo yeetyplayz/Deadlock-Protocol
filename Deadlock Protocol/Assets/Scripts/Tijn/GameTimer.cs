@@ -17,6 +17,6 @@ public class GameTimer : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        counterText.text = "time: =" + Mathf.FloorToInt(timer).ToString();
+        counterText.text = "Alive:" + Mathf.FloorToInt(timer).ToString();
     }
 }
