@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd149ca3bcd40e84ea6eb17c68f7779f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::jumpPad
-  playerMovement: {fileID: 868360162}
+  player: {fileID: 0}
 --- !u!65 &374437327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -372,17 +372,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &868360162 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5225703262251153663, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
-  m_PrefabInstance: {fileID: 717911301473183847}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7825d67555c7442a7527f2bc829958, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::playerMovement
 --- !u!1 &1528357122 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 648340027228284081, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
@@ -506,191 +495,25 @@ MonoBehaviour:
   gunSound: {fileID: 0}
   gunShotSound: {fileID: 8300000, guid: 10de0749a26fc8f4ea1ec1548d85f3ac, type: 3}
   gunReloadSound: {fileID: 8300000, guid: 6671b1dccab9759469c2040cde2b46e5, type: 3}
---- !u!1 &1712349210
+--- !u!1 &1633084960 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5082382049597199184, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
+  m_PrefabInstance: {fileID: 717911301473183847}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1712349212}
-  - component: {fileID: 1712349211}
-  - component: {fileID: 1712349218}
-  - component: {fileID: 1712349217}
-  - component: {fileID: 1712349216}
-  - component: {fileID: 1712349215}
-  - component: {fileID: 1712349214}
-  - component: {fileID: 1712349213}
-  m_Layer: 0
-  m_Name: Gun Component Presets
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1712349211
+--- !u!114 &1633084965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712349210}
+  m_GameObject: {fileID: 1633084960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9b9ec08060793b4e975f048d5b575d3, type: 3}
+  m_Script: {fileID: 11500000, guid: b9b027d22ac3238488520705714d386a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::gun
-  damage: 0
-  firerate: 0
-  reloadSpeed: 0
-  ammo: 0
-  maxAmmo: 0
-  bug: 
-  gunSound: {fileID: 0}
-  gunShotSound: {fileID: 0}
-  gunReloadSound: {fileID: 0}
---- !u!4 &1712349212
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712349210}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1712349213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712349210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26f6c1ede904f0e49875cf8833d0ded9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::sniper
-  damage: 0
-  firerate: 0
-  reloadSpeed: 0
-  ammo: 0
-  maxAmmo: 0
-  bug: 
-  gunSound: {fileID: 0}
-  gunShotSound: {fileID: 8300000, guid: bfb67fab02f8a6048aa8f05992fa88f5, type: 3}
-  gunReloadSound: {fileID: 8300000, guid: dd7ebb1bb9232b1449575686d9a7d3c1, type: 3}
---- !u!114 &1712349214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712349210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db7c213c96c869478a76f8ee0a6cb00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::shotgun
-  damage: 0
-  firerate: 0
-  reloadSpeed: 0
-  ammo: 0
-  maxAmmo: 0
-  bug: 
-  gunSound: {fileID: 0}
-  gunShotSound: {fileID: 0}
-  gunReloadSound: {fileID: 0}
---- !u!114 &1712349215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712349210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 559ef55910f532946ab112ee757cfbe1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::rifle
-  damage: 0
-  firerate: 0
-  reloadSpeed: 0
-  ammo: 0
-  maxAmmo: 0
-  bug: 
-  gunSound: {fileID: 0}
-  gunShotSound: {fileID: 8300000, guid: 10de0749a26fc8f4ea1ec1548d85f3ac, type: 3}
-  gunReloadSound: {fileID: 8300000, guid: 6671b1dccab9759469c2040cde2b46e5, type: 3}
---- !u!114 &1712349216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712349210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b052dcd1b34dc04081a671539cfbf05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::pistol
-  damage: 0
-  firerate: 0
-  reloadSpeed: 0
-  ammo: 0
-  maxAmmo: 0
-  bug: 
-  gunSound: {fileID: 0}
-  gunShotSound: {fileID: 8300000, guid: d1927acede19bda42b1f2f768838047d, type: 3}
-  gunReloadSound: {fileID: 8300000, guid: 791c2c2b1b0091a40898677eb241d60f, type: 3}
---- !u!114 &1712349217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712349210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad7c8565209341d46add4da7f130c2cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::minigun
-  damage: 0
-  firerate: 0
-  reloadSpeed: 0
-  ammo: 0
-  maxAmmo: 0
-  bug: 
-  gunSound: {fileID: 0}
-  gunShotSound: {fileID: 0}
-  gunReloadSound: {fileID: 0}
---- !u!114 &1712349218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712349210}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 202bc8ea5605c35428823405b9a484a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::machineGun
-  damage: 0
-  firerate: 0
-  reloadSpeed: 0
-  ammo: 0
-  maxAmmo: 0
-  bug: 
-  gunSound: {fileID: 0}
-  gunShotSound: {fileID: 0}
-  gunReloadSound: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::playerCamera
+  mouseSensitivity: 400
+  playerBody: {fileID: 0}
 --- !u!1 &1952671481
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +626,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1983493244 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7689721972551430981, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
+  m_PrefabInstance: {fileID: 717911301473183847}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &717911301473183847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -819,10 +647,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6795599284283610490, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
-      propertyPath: pistolShot
+    - target: {fileID: 5225703262251153663, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
+      propertyPath: playerBody
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1983493244}
     - target: {fileID: 7689721972551430981, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -863,19 +691,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8710440805426286673, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9142213478186333575, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0424451e95c24e449807b64d999c0956, type: 2}
-    m_RemovedComponents:
-    - {fileID: 6795599284283610490, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5082382049597199184, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1633084965}
     - targetCorrespondingSourceObject: {fileID: 648340027228284081, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1528357134}
@@ -891,4 +717,3 @@ SceneRoots:
   - {fileID: 1952671485}
   - {fileID: 717911301473183847}
   - {fileID: 374437330}
-  - {fileID: 1712349212}

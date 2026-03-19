@@ -4,7 +4,8 @@ public class pistol : gun
 {
     private void Start()
     {
-        damage = 13.6f;
+        damage = 14;
+        range = 100;
         firerate = 0f;
         reloadSpeed = 0f;
         ammo = 12;

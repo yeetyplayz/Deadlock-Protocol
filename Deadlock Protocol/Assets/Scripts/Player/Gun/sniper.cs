@@ -4,7 +4,8 @@ public class sniper : gun
 {
     private void Start()
     {
-        damage = 50f;
+        damage = 50;
+        range = 250;
         firerate = 3.4f;
         reloadSpeed = 5.2f;
         ammo = 5;

@@ -4,7 +4,8 @@ using System.Collections;
 public class gun : MonoBehaviour
 {
     [Header("Gun Settings")]
-    public float damage;
+    public int damage;
+    public float range;
     public float firerate;
     public float reloadSpeed;
     private bool isReloading;
@@ -12,6 +13,8 @@ public class gun : MonoBehaviour
     public int ammo;
     public int maxAmmo;
     public string bug;
+    public Camera fpsCam;
+    public ZombieHealth zombieHealth;
     public AudioSource gunSound;
     public AudioClip gunShotSound;
     public AudioClip gunReloadSound;
@@ -50,6 +53,18 @@ public class gun : MonoBehaviour
     {
         pew = true;
         --ammo;
+        RaycastHit hit;
+        if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        {
+            if(hit.transform.CompareTag("Zombie"))
+            {
+                zombieHealth.TakeDamage(damage);
+            }
+            if(!hit.transform.CompareTag("Zombie"))
+            {
+                Debug.Log("Learn to aim dummy");
+            }
+        }
         Debug.Log(bug);
         yield return new WaitForSeconds(firerate);
         pew = false;
