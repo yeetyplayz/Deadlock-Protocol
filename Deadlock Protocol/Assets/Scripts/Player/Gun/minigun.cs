@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class minigun : gun
 {
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         damage = 3;
         range = 50;
         firerate = 0.000001f;

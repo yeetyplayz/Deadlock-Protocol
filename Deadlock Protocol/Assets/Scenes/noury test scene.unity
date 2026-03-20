@@ -551,6 +551,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 426637223442014653, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
       insertIndex: -1
       addedObject: {fileID: 589525691}
+    - targetCorrespondingSourceObject: {fileID: 648340027228284081, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1989538375}
   m_SourcePrefab: {fileID: 100100000, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
 --- !u!1 &1725846401
 GameObject:
@@ -649,6 +652,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1989538370 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 648340027228284081, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
+  m_PrefabInstance: {fileID: 819848785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1989538375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989538370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f6c1ede904f0e49875cf8833d0ded9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::sniper
+  damage: 0
+  range: 0
+  firerate: 0
+  reloadSpeed: 0
+  ammo: 0
+  maxAmmo: 0
+  bug: 
+  fpsCam: {fileID: 0}
+  zombieHealth: {fileID: 0}
+  gunSound: {fileID: 0}
+  gunShotSound: {fileID: 8300000, guid: bfb67fab02f8a6048aa8f05992fa88f5, type: 3}
+  gunReloadSound: {fileID: 8300000, guid: dd7ebb1bb9232b1449575686d9a7d3c1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
