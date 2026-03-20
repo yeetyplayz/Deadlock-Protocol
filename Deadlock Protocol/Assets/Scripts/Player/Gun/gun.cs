@@ -58,13 +58,10 @@ public class gun : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            if(hit.transform.CompareTag("Zombie"))
+            if(hit.transform.gameObject.CompareTag("Zombie"))
             {
+                zombieHealth = GetComponent<ZombieHealth>();
                 zombieHealth.TakeDamage(damage);
-            }
-            if(!hit.transform.CompareTag("Zombie"))
-            {
-                Debug.Log("Learn to aim dummy");
             }
         }
         Debug.Log(bug);
