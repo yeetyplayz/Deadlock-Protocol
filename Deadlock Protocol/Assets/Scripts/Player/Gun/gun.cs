@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SocialPlatforms;
 
 public class gun : MonoBehaviour
 {
@@ -19,8 +20,9 @@ public class gun : MonoBehaviour
     public AudioClip gunShotSound;
     public AudioClip gunReloadSound;
 
-    private void Start()
+    public virtual void Start()
     {
+        fpsCam = GetComponentInParent<Camera>();
         gunSound = GetComponent<AudioSource>();
     }
     public virtual void Fire()

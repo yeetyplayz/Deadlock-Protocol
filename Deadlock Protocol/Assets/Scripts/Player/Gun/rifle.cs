@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class rifle : gun
 {
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         damage = 200;
         range = 300;
         firerate = 0f;

@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class sniper : gun
 {
-    private void Start()
+    public override void Start()
     {
+        base.Start();
         damage = 50;
         range = 250;
         firerate = 3.4f;
