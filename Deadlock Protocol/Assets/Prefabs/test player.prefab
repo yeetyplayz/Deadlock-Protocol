@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 9136718449862072834}
   - component: {fileID: 2901878285575863644}
   - component: {fileID: 1644048548722083043}
-  - component: {fileID: 5225703262251153663}
+  - component: {fileID: 9092356796742729959}
   m_Layer: 0
   m_Name: test player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,7 +144,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &5225703262251153663
+--- !u!114 &9092356796742729959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,11 +153,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 426637223442014653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7825d67555c7442a7527f2bc829958, type: 3}
+  m_Script: {fileID: 11500000, guid: c309ba371afb64b48af936aed88eff2c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::playerMovement
+  m_EditorClassIdentifier: Assembly-CSharp::player
+  health: 0
+  isDead: 0
   moveSpeed: 4
   jumpHeight: 7
+  isGrounded: 0
 --- !u!1 &648340027228284081
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +172,8 @@ GameObject:
   - component: {fileID: 4257604589521357004}
   - component: {fileID: 8222883282948477017}
   - component: {fileID: 9142213478186333575}
-  - component: {fileID: 6795599284283610490}
+  - component: {fileID: 246571831053057753}
+  - component: {fileID: 6825198721159434991}
   m_Layer: 0
   m_Name: test gun
   m_TagString: Untagged
@@ -225,7 +229,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0424451e95c24e449807b64d999c0956, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -249,7 +253,104 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6795599284283610490
+--- !u!82 &246571831053057753
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648340027228284081}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -5963812132792322140, guid: c27acde8d0d31964eba22c53ee6688ea, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &6825198721159434991
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,16 +359,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 648340027228284081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7366931cdf159e7488745676a1682194, type: 3}
+  m_Script: {fileID: 11500000, guid: 559ef55910f532946ab112ee757cfbe1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::gunBehaviour
-  pistol: 0
-  pistolShot: {fileID: 0}
-  shotgun: 0
-  machineGun: 0
-  miniGun: 0
-  rifle: 0
-  sniper: 0
+  m_EditorClassIdentifier: Assembly-CSharp::rifle
+  damage: 0
+  range: 0
+  firerate: 0
+  reloadSpeed: 0
+  ammo: 0
+  maxAmmo: 0
+  bug: 
+  fpsCam: {fileID: 0}
+  zombieHealth: {fileID: 0}
+  gunSound: {fileID: 0}
+  gunShotSound: {fileID: 8300000, guid: 10de0749a26fc8f4ea1ec1548d85f3ac, type: 3}
+  gunReloadSound: {fileID: 8300000, guid: 6671b1dccab9759469c2040cde2b46e5, type: 3}
 --- !u!1 &5082382049597199184
 GameObject:
   m_ObjectHideFlags: 0
