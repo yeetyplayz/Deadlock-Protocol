@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-using UnityEngine;
-
 public class ZombieAI : MonoBehaviour
 {
     private Transform player;
