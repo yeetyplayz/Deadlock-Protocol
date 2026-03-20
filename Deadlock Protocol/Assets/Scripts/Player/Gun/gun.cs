@@ -22,7 +22,7 @@ public class gun : MonoBehaviour
 
     public virtual void Start()
     {
-        fpsCam = GetComponentInParent<Camera>();
+        fpsCam = Camera.main;
         gunSound = GetComponent<AudioSource>();
     }
     public virtual void Fire()
@@ -58,13 +58,20 @@ public class gun : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            if(hit.transform.gameObject.CompareTag("Zombie"))
+            if (hit.transform != null && hit.transform.CompareTag("Zombie"))
             {
-                zombieHealth = GetComponent<ZombieHealth>();
-                zombieHealth.TakeDamage(damage);
+                zombieHealth = hit.transform.GetComponent<ZombieHealth>();
+                if (zombieHealth != null)
+                {
+                    zombieHealth.TakeDamage(damage);
+                }
+            }
+            else
+            {
+                Debug.Log("learn to shoot");
             }
         }
-        Debug.Log(bug);
+        Debug.Log("bug");
         yield return new WaitForSeconds(firerate);
         pew = false;
     }
