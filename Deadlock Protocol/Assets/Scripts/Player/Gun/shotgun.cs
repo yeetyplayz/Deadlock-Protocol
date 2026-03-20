@@ -4,6 +4,6 @@ public class shotgun : gun
 {
     public override void Fire()
     {
-        Debug.Log("shotgun BOOM");
+        base.Fire();
     }
 }

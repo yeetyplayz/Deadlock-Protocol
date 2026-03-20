@@ -4,7 +4,8 @@ public class minigun : gun
 {
     private void Start()
     {
-        damage = 3.4f;
+        damage = 3;
+        range = 50;
         firerate = 0.000001f;
         reloadSpeed = 0f;
         ammo = 999999;
