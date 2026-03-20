@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3066590982408395014}
   - component: {fileID: -6658174361493742472}
   - component: {fileID: -658426203877655072}
+  - component: {fileID: 8640201291176035655}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -139,5 +140,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a144fd6669faaa4fae33b062b351a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZombieAI
-  player: {fileID: 7689721972551430981, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
   speed: 3
+  rotationSpeed: 5
+--- !u!114 &8640201291176035655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515501443616159264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb02d030916f7044bc3c4ffe90a20a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Damage
+  damage: 10
