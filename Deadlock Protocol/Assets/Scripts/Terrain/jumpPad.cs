@@ -4,10 +4,11 @@ public class jumpPad : MonoBehaviour
 {
     private Rigidbody rb;
     private int jumpForce = 15;
-    public player player;
+    private player player;
 
     private void OnTriggerEnter(Collider other)
     {
+        player = other.GetComponent<player>();
         if (other.gameObject.CompareTag("Player"))
         {
             rb = other.gameObject.GetComponent<Rigidbody>();

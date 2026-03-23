@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2901878285575863644}
   - component: {fileID: 1644048548722083043}
   - component: {fileID: 9092356796742729959}
+  - component: {fileID: 8725505163838666360}
   m_Layer: 0
   m_Name: test player
   m_TagString: Player
@@ -161,6 +162,26 @@ MonoBehaviour:
   moveSpeed: 4
   jumpHeight: 7
   isGrounded: 0
+--- !u!114 &8725505163838666360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426637223442014653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f57368538f999b4b9b23a38ea58fcb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CircleSpawner
+  prefab: {fileID: 1515501443616159264, guid: 35e3d094ae43dff469858fb330a078f1, type: 3}
+  spawnDelay: 3
+  player: {fileID: 7689721972551430981}
+  spawnRadius: 20
+  buildingLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  checkRadius: 1
 --- !u!1 &648340027228284081
 GameObject:
   m_ObjectHideFlags: 0

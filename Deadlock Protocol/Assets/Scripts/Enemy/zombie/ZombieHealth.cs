@@ -25,7 +25,7 @@ public class ZombieHealth : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         Destroy(gameObject);
     }
