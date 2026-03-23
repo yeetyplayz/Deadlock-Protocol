@@ -256,30 +256,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 426637223442014653, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
   m_PrefabInstance: {fileID: 819848785}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &589525685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589525684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26f6c1ede904f0e49875cf8833d0ded9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::sniper
-  damage: 0
-  range: 0
-  firerate: 0
-  reloadSpeed: 0
-  ammo: 0
-  maxAmmo: 0
-  bug: 
-  fpsCam: {fileID: 0}
-  zombieHealth: {fileID: 0}
-  gunSound: {fileID: 0}
-  gunShotSound: {fileID: 8300000, guid: bfb67fab02f8a6048aa8f05992fa88f5, type: 3}
-  gunReloadSound: {fileID: 8300000, guid: dd7ebb1bb9232b1449575686d9a7d3c1, type: 3}
 --- !u!82 &589525691
 AudioSource:
   m_ObjectHideFlags: 0
@@ -541,13 +517,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8725505163838666360, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 4876108510852924655, guid: aaba84fd76f2650418a67ef183f403bd, type: 3}
+    - target: {fileID: 8725505163838666360, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 426637223442014653, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 589525685}
     - targetCorrespondingSourceObject: {fileID: 426637223442014653, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
       insertIndex: -1
       addedObject: {fileID: 589525691}
@@ -600,58 +581,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1831464706
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1831464708}
-  - component: {fileID: 1831464707}
-  m_Layer: 0
-  m_Name: EnemySpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1831464707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831464706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f57368538f999b4b9b23a38ea58fcb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CircleSpawner
-  prefab: {fileID: 1515501443616159264, guid: 35e3d094ae43dff469858fb330a078f1, type: 3}
-  spawnDelay: 3
-  player: {fileID: 7689721972551430981, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
-  spawnRadius: 10
-  buildingLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  checkRadius: 1
---- !u!4 &1831464708
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831464706}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58533, y: 0.5, z: -4.23316}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1989538370 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 648340027228284081, guid: 6385d9867c3d8d045bf057b252805430, type: 3}
@@ -687,6 +616,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 203844589}
   - {fileID: 793906935}
-  - {fileID: 1831464708}
   - {fileID: 1725846403}
   - {fileID: 819848785}
