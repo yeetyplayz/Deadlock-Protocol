@@ -20,23 +20,9 @@ public class gun : MonoBehaviour
     public AudioSource gunSound;
     public AudioClip gunShotSound;
     public AudioClip gunReloadSound;
-
-    private sniper sniper;
-    private pistol pistol;
-    private rifle rifle;
-    private machineGun machineGun;
-    private minigun minigun;
-
     public virtual void Start()
     {
         fpsCam = Camera.main;
-        gunSound = GetComponent<AudioSource>();
-        sniper = GetComponent<sniper>();
-        pistol = GetComponent<pistol>();
-        rifle = GetComponent<rifle>();
-        machineGun = GetComponent<machineGun>();
-        minigun = GetComponent<minigun>();
-        SwitchTo(sniper);
     }
     public virtual void Fire()
     {
@@ -91,10 +77,6 @@ public class gun : MonoBehaviour
 
         public void Update()
     {
-        if (switchDelay >= 0)
-        {
-            switchDelay -= Time.deltaTime;
-        }
         if (!pew && !isReloading && ammo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
         {
             Fire();
@@ -103,49 +85,5 @@ public class gun : MonoBehaviour
         {
             Reload();
         }
-        if (switchDelay <= 0 && Input.GetKeyDown(KeyCode.F))
-        {
-            SwitchGun(1);
-            switchDelay = 1.5f;
-        }
-    }
-    private void SwitchGun(int gun)
-    {
-        int curGun = 1;
-        curGun += gun;
-        if (curGun == 1)
-        {
-            SwitchTo(sniper);
-        }
-        if (curGun == 2)
-        {
-            SwitchTo(pistol);
-        }
-        if (curGun == 3)
-        {
-            SwitchTo(rifle);
-        }
-        if (curGun == 4)
-        {
-            SwitchTo(machineGun);
-        }
-        if(curGun == 5)
-        {
-            SwitchTo(minigun);
-        }
-        if(curGun == 6)
-        {
-            curGun = 1;
-        }
-    }
-    private void SwitchTo(Behaviour switchTo)
-    {
-        sniper.enabled = false;
-        pistol.enabled = false;
-        rifle.enabled = false;
-        machineGun.enabled = false;
-        minigun.enabled = false;
-
-        switchTo.enabled = true;
     }
 }
