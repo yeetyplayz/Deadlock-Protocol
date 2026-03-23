@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class gunSwitcher : MonoBehaviour
 {
-    private float switchDelay;
+    private float switchDelay = 1.5f;
+    private int gun = 0;
     private sniper sniper;
     private pistol pistol;
     private rifle rifle;
@@ -16,6 +17,8 @@ public class gunSwitcher : MonoBehaviour
         rifle = GetComponent<rifle>();
         machineGun = GetComponent<machineGun>();
         minigun = GetComponent<minigun>();
+
+        Switcheroo(sniper);
     }
     private void Update()
     {
@@ -25,12 +28,12 @@ public class gunSwitcher : MonoBehaviour
         }
         if (switchDelay <= 0 && Input.GetKeyDown(KeyCode.F))
         {
+            switchDelay = 1.5f;
             SwitchGun(1);
         }
     }
     private void SwitchGun(int wow)
     {
-        int gun = 0;
         gun += wow;
         if (gun == 0)
         {
@@ -51,6 +54,11 @@ public class gunSwitcher : MonoBehaviour
         if (gun == 4)
         {
             Switcheroo(minigun);
+        }
+        if (gun >= 5)
+        {
+            Switcheroo(sniper);
+            gun = 0;
         }
     }
     private void Switcheroo(Behaviour gun)

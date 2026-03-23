@@ -10,7 +10,6 @@ public class gun : MonoBehaviour
     public float firerate;
     public float reloadSpeed;
     private bool isReloading;
-    private float switchDelay = 1.5f;
     private bool pew;
     public int ammo;
     public int maxAmmo;
@@ -23,6 +22,7 @@ public class gun : MonoBehaviour
     public virtual void Start()
     {
         fpsCam = Camera.main;
+        gunSound = GetComponent<AudioSource>();
     }
     public virtual void Fire()
     {
@@ -70,7 +70,7 @@ public class gun : MonoBehaviour
                 Debug.Log("learn to shoot");
             }
         }
-        Debug.Log("bug");
+        Debug.Log(bug);
         yield return new WaitForSeconds(firerate);
         pew = false;
     }

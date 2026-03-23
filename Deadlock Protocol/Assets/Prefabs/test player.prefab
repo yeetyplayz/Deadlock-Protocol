@@ -173,6 +173,12 @@ GameObject:
   - component: {fileID: 8222883282948477017}
   - component: {fileID: 9142213478186333575}
   - component: {fileID: 246571831053057753}
+  - component: {fileID: 2388691819834861561}
+  - component: {fileID: 4314108985135698599}
+  - component: {fileID: 6797101437335936802}
+  - component: {fileID: 8033820184506313478}
+  - component: {fileID: 8163342447699675184}
+  - component: {fileID: 8546320024237093254}
   m_Layer: 0
   m_Name: test gun
   m_TagString: Untagged
@@ -349,6 +355,138 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2388691819834861561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648340027228284081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f6c1ede904f0e49875cf8833d0ded9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::sniper
+  damage: 0
+  range: 0
+  firerate: 0
+  reloadSpeed: 0
+  ammo: 0
+  maxAmmo: 0
+  bug: 
+  fpsCam: {fileID: 0}
+  zombieHealth: {fileID: 0}
+  gunSound: {fileID: 0}
+  gunShotSound: {fileID: 8300000, guid: bfb67fab02f8a6048aa8f05992fa88f5, type: 3}
+  gunReloadSound: {fileID: 8300000, guid: dd7ebb1bb9232b1449575686d9a7d3c1, type: 3}
+--- !u!114 &4314108985135698599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648340027228284081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 559ef55910f532946ab112ee757cfbe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::rifle
+  damage: 0
+  range: 0
+  firerate: 0
+  reloadSpeed: 0
+  ammo: 0
+  maxAmmo: 0
+  bug: 
+  fpsCam: {fileID: 0}
+  zombieHealth: {fileID: 0}
+  gunSound: {fileID: 0}
+  gunShotSound: {fileID: 0}
+  gunReloadSound: {fileID: 0}
+--- !u!114 &6797101437335936802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648340027228284081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b052dcd1b34dc04081a671539cfbf05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::pistol
+  damage: 0
+  range: 0
+  firerate: 0
+  reloadSpeed: 0
+  ammo: 0
+  maxAmmo: 0
+  bug: 
+  fpsCam: {fileID: 0}
+  zombieHealth: {fileID: 0}
+  gunSound: {fileID: 0}
+  gunShotSound: {fileID: 0}
+  gunReloadSound: {fileID: 0}
+--- !u!114 &8033820184506313478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648340027228284081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7c8565209341d46add4da7f130c2cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::minigun
+  damage: 0
+  range: 0
+  firerate: 0
+  reloadSpeed: 0
+  ammo: 0
+  maxAmmo: 0
+  bug: 
+  fpsCam: {fileID: 0}
+  zombieHealth: {fileID: 0}
+  gunSound: {fileID: 0}
+  gunShotSound: {fileID: 0}
+  gunReloadSound: {fileID: 0}
+--- !u!114 &8163342447699675184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648340027228284081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202bc8ea5605c35428823405b9a484a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::machineGun
+  damage: 0
+  range: 0
+  firerate: 0
+  reloadSpeed: 0
+  ammo: 0
+  maxAmmo: 0
+  bug: 
+  fpsCam: {fileID: 0}
+  zombieHealth: {fileID: 0}
+  gunSound: {fileID: 0}
+  gunShotSound: {fileID: 0}
+  gunReloadSound: {fileID: 0}
+--- !u!114 &8546320024237093254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648340027228284081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ee7fc47f190a3544be525123fecde38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::gunSwitcher
 --- !u!1 &5082382049597199184
 GameObject:
   m_ObjectHideFlags: 0
