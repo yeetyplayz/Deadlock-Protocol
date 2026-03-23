@@ -2,19 +2,19 @@ using UnityEngine;
 
 public class oOB : MonoBehaviour
 {
-    public ZombieHealth zHealth;
-    public player pHealth;
+     ZombieHealth zHealth;
+    private player pHealth;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(other.transform.CompareTag("Player"))
+        if (collision.transform.CompareTag("Player"))
         {
-            pHealth = GetComponent<player>();
+            pHealth = collision.transform.GetComponent<player>();
             pHealth.Die();
         }
-        if(other.transform.CompareTag("Zombie"))
+        if (collision.transform.CompareTag("Zombie"))
         {
-            zHealth = GetComponent<ZombieHealth>();
+            zHealth = collision.transform.GetComponent<ZombieHealth>();
             zHealth.Die();
         }
     }
