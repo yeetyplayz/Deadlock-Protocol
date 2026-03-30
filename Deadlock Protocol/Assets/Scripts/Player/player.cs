@@ -70,7 +70,6 @@ public class player : MonoBehaviour
     }
     public void Die()
     {
-        gameObject.SetActive(false);
-        isDead = true;
+        Application.Quit();
     }
 }

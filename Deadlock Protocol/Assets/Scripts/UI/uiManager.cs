@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class uiManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header("UI stuff")]
+    public GameObject mainUI;
 
-    // Update is called once per frame
-    void Update()
+    [Header("UI buttons")]
+    public GameObject startGameButton;
+    public void ChangeUI(GameObject ui)
     {
-        
+        mainUI.SetActive(false);
+
+        ui.SetActive(true);
+    }
+    public void ChangeButton(GameObject ui)
+    {
+
     }
 }
